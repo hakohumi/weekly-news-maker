@@ -4,8 +4,10 @@
   <button @click="decrement">Decrement</button>
 
   <div class="input-area">
+    <input v-model="gyoumu_title" placeholder="業務名" />
+    {{ gyoumu_title }}
+    <textarea v-model="message" placeholder="メモ"></textarea>
     {{ message }}
-    <textarea v-model="message" placeholder="add multiple lines"></textarea>
   </div>
 </template>
 
@@ -21,7 +23,8 @@ import { ref } from 'vue'
 
 const count = ref(0)
 
-const message = ref<string>(' ')
+const gyoumu_title = ref<string>('test')
+const message = ref<string>('')
 
 const increment = () => {
   count.value++
