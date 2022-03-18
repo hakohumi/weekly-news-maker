@@ -17,6 +17,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+// TODO: view_task_timeに対して数値のみのバリデーションをおこなう
+
 const props = defineProps({
   task_title: String,
   task_time: Number,
